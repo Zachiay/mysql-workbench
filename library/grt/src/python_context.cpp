@@ -33,7 +33,6 @@
 // python internals
 #include <Python.h>
 #include <errcode.h>
-#include <token.h>
 #include <frameobject.h>
 
 #include "python_grtobject.h"
@@ -67,8 +66,6 @@ static std::string flatten_class_name(std::string name) {
 
 PythonContextHelper::PythonContextHelper(const std::string &module_path) {
   std::string wb_pythonpath;
-  if (getenv("PYTHON_DEBUG"))
-    Py_VerboseFlag = 5;
 
 #ifdef _MSC_VER
   // Hack needed in Windows because Python lib uses C:\Python26 as default pythonhome
@@ -106,60 +103,27 @@ PythonContextHelper::PythonContextHelper(const std::string &module_path) {
 //--------------------------------------------------------------------------------------------------
 
 void PythonContextHelper::InitPython() {
-#ifndef _MSC_VER
-  static const wchar_t *argv[2] = { L"/dev/null", nullptr };
-  Py_InitializeEx(0); // skips signal handler init
-
-  PyRun_SimpleString(
-      "import importlib.abc\n" \
-      "import importlib.machinery\n" \
-      "import sys\n" \
-      "\n" \
-      "\n" \
-      "class Finder(importlib.abc.MetaPathFinder):\n" \
-      "    def find_spec(self, fullname, path, target=None):\n" \
-      "        if fullname in sys.builtin_module_names:\n" \
-      "            return importlib.machinery.ModuleSpec(\n" \
-      "                fullname,\n" \
-      "                importlib.machinery.BuiltinImporter,\n" \
-      "            )\n" \
-      "\n" \
-      "\n" \
-      "sys.meta_path.append(Finder())\n" \
-  );
-
-  // Stores the main thread state
-  _main_thread_state = PyThreadState_Get();
-
-  PySys_SetArgv(1, const_cast<wchar_t **>(argv));
-
-  // PyEval_InitThreads();
-  // Changed in version 3.9: The function now does nothing.
-  // Changed in version 3.7: This function is now called by Py_Initialize(),
-  //                         so you don’t have to call it yourself anymore.
-#else
-  char const* argv[2] = { "/dev/null", nullptr };
+  char const *argv[2] = { "/dev/null", nullptr };
   Py_InitializeEx(0);
   PyStatus status; 
   PyConfig_InitPythonConfig(&_config);
   _config.use_environment = 1;
+  if (getenv("PYTHON_DEBUG"))
+    _config.verbose = 5;
 
   do {
     status = PyConfig_SetBytesArgv(&_config, 1, const_cast<char *const *>(argv));
     if (PyStatus_Exception(status)) {
       break;
     }
-
     status = Py_InitializeFromConfig(&_config);
     if (PyStatus_Exception(status)) {
       break;
     }
-
     int ret = Py_IsInitialized();
     if (ret == 0) {
       break;
     }
-
     PyRun_SimpleString(
       "from importlib.abc import MetaPathFinder\n"
       "from importlib.machinery import ModuleSpec, BuiltinImporter\n"
@@ -186,8 +150,6 @@ void PythonContextHelper::InitPython() {
     return;
   }
   Py_ExitStatusException(status);
-
- #endif
 }
 
 //--------------------------------------------------------------------------------------------------

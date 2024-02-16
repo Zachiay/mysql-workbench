@@ -68,10 +68,10 @@
                 <?endif?>
                 <File Id="file1087" Name="wb.py" />
                 <?if $(var.LICENSE_TYPE) = "debug"?>
-                <File Id="file1099d" Name="python311_d.dll" />
+                <File Id="file1099d" Name="python312_d.dll" />
                 <File Id="python_d.exe" Name="python_d.exe" />
                 <?else?>
-                <File Id="file1099" Name="python311.dll" />
+                <File Id="file1099" Name="python312.dll" />
                 <File Id="python.exe" Name="python.exe" />
                 <?endif?>
                 <File Id="file1101" Name="mysqldump.exe" />
@@ -1971,9 +1971,9 @@
                 <Directory Id="python_site_packages" Name="site-packages">
                   <Component DiskId="1" Guid="cc59f4da-0c26-4471-a957-bc9180d45fc4" Id="python_site_packages_pyodbc" Location="either">
                     <?if $(var.SETUP_TYPE) = "debug" ?>
-                    <File Id="file68021d" Name="pyodbc_d.cp311-win_amd64.pyd" />
+                    <File Id="file68021d" Name="pyodbc_d.cp312-win_amd64.pyd" />
                     <?else?>
-                    <File Id="file68021" Name="pyodbc.cp311-win_amd64.pyd" />
+                    <File Id="file68021" Name="pyodbc.cp312-win_amd64.pyd" />
                     <?endif?>
                   </Component>
                 </Directory>
