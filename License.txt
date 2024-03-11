@@ -25,7 +25,7 @@ Licensing Information
    component or in the license documentation. Without limiting your rights
    under the GPLv2, the authors of MySQL hereby grant you an additional
    permission to link the program and your derivative works with the
-   separately licensed software that they have included with the program.
+   separately licensed software that they have either included with the program.
 
    Copyright (c) 2006, 2023, Oracle and/or its affiliates.
 
