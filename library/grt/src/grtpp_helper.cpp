@@ -57,8 +57,8 @@ static std::string copyright =
   " * designated in a particular file or component or in included license\n"
   " * documentation.  The authors of MySQL hereby grant you an additional\n"
   " * permission to link the program and your derivative works with the\n"
-  " * separately licensed software that they have either included with
- * the program or referenced in the documentation.\n"
+  " * separately licensed software that they have either included with\n"
+  " * the program or referenced in the documentation.\n"
   " * This program is distributed in the hope that it will be useful, but\n"
   " * WITHOUT ANY WARRANTY; without even the implied warranty of\n"
   " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See\n"
