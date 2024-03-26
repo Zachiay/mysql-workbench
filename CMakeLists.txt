@@ -119,7 +119,7 @@ if (UNIX)
 endif(UNIX)
 
 
-pkg_check_modules(PCRE REQUIRED libpcre libpcrecpp)
+# pkg_check_modules(PCRE REQUIRED libpcre libpcrecpp)
 pkg_check_modules(CAIRO REQUIRED cairo>=1.5.12)
 pkg_check_modules(UUID REQUIRED uuid)
 pkg_check_modules(LIBZIP REQUIRED libzip)

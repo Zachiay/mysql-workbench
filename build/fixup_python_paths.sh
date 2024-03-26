@@ -5,7 +5,7 @@
 
 # <file to fix>
 
-new_path="@executable_path/../Frameworks/Python.framework/Versions/3.11/Python"
+new_path="@executable_path/../Frameworks/Python.framework/Versions/3.12/Python"
 
 for file in $*; do
   if [ -f $file ]; then

@@ -18025,6 +18025,7 @@
 				WARNING_CFLAGS = (
 					"$(inherited)",
 					"-Wno-shorten-64-to-32",
+					"-Wno-enum-constexpr-conversion",
 				);
 			};
 			name = Debug;
@@ -18066,6 +18067,7 @@
 				WARNING_CFLAGS = (
 					"$(inherited)",
 					"-Wno-shorten-64-to-32",
+					"-Wno-enum-constexpr-conversion",
 				);
 				ZERO_LINK = NO;
 			};

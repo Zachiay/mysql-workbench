@@ -30,6 +30,7 @@
 #include <cppconn/driver.h>
 #include <memory>
 #include <set>
+#include <stdint.h>
 
 #include "grts/structs.db.mgmt.h"
 #include <cppconn/connection.h>

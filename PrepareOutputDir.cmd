@@ -157,7 +157,6 @@ xcopy /i /s /y /d %PYTHON_COMMON_DIR%\concurrent %TARGET_DIR%\python\lib\concurr
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\ctypes %TARGET_DIR%\python\lib\ctypes 1> nul 2> nul
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\curses %TARGET_DIR%\python\lib\curses 1> nul 2> nul
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\dbm %TARGET_DIR%\python\lib\dbm 1> nul 2> nul
-xcopy /i /s /y /d %PYTHON_COMMON_DIR%\distutils %TARGET_DIR%\python\lib\distutils 1> nul 2> nul
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\ensurepip %TARGET_DIR%\python\lib\ensurepip 1> nul 2> nul
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\html %TARGET_DIR%\python\lib\html 1> nul 2> nul
 xcopy /i /s /y /d %PYTHON_COMMON_DIR%\http %TARGET_DIR%\python\lib\http 1> nul 2> nul
@@ -177,6 +176,8 @@ robocopy %PYTHON_COMMON_DIR%\__phello__\ham %TARGET_DIR%\python\lib\__phello__\h
 robocopy %PYTHON_COMMON_DIR%\re %TARGET_DIR%\python\lib\re
 robocopy %PYTHON_COMMON_DIR%\tomllib %TARGET_DIR%\python\lib\tomllib
 robocopy %PYTHON_COMMON_DIR%\zoneinfo %TARGET_DIR%\python\lib\zoneinfo
+robocopy %PYTHON_COMMON_DIR%\zipfile %TARGET_DIR%\python\lib\zipfile
+robocopy %PYTHON_COMMON_DIR%\zipfile\_path %TARGET_DIR%\python\lib\zipfile\_path
 
 robocopy %PYTHON_DLLS_DIR% %TARGET_DIR%\python\DLLs *%DEBUG_PREFIX%.pyd %EXCLUDE_CMD% _ctypes_test*.pyd
 robocopy %PYTHON_DIR% %TARGET_DIR%\python\site-packages\ pyodbc%DEBUG_PREFIX%*.pyd %EXCLUDE_CMD%

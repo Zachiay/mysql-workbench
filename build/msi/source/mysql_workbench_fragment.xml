@@ -1039,7 +1039,6 @@
                     <File Id="lib___hello__.py" Name="__hello__.py" />
                     <File Id="lib__aix_support.py" Name="_aix_support.py" />
                     <File Id="lib_zipimport.py" Name="zipimport.py" />
-                    <File Id="lib__bootsubprocess.py" Name="_bootsubprocess.py" />
                     <File Id="lib_graphlib.py" Name="graphlib.py" />
                     <File Id="lib__collections_abc.py" Name="_collections_abc.py" />
                     <File Id="lib__compat_pickle.py" Name="_compat_pickle.py" />
@@ -1058,8 +1057,8 @@
                     <File Id="lib_antigravity.py" Name="antigravity.py" />
                     <File Id="lib_argparse.py" Name="argparse.py" />
                     <File Id="lib_ast.py" Name="ast.py" />
-                    <File Id="lib_asynchat.py" Name="asynchat.py" />
-                    <File Id="lib_asyncore.py" Name="asyncore.py" />
+                    <File Id="lib__pydatetime.py" Name="_pydatetime.py" />
+                    <File Id="lib__pylong.py" Name="_pylong.py" />
                     <File Id="lib_base64.py" Name="base64.py" />
                     <File Id="lib_bdb.py" Name="bdb.py" />
                     <File Id="lib_bisect.py" Name="bisect.py" />
@@ -1106,7 +1105,6 @@
                     <File Id="lib_hmac.py" Name="hmac.py" />
                     <File Id="lib_imaplib.py" Name="imaplib.py" />
                     <File Id="lib_imghdr.py" Name="imghdr.py" />
-                    <File Id="lib_imp.py" Name="imp.py" />
                     <File Id="lib_inspect.py" Name="inspect.py" />
                     <File Id="lib_io.py" Name="io.py" />
                     <File Id="lib_ipaddress.py" Name="ipaddress.py" />
@@ -1158,7 +1156,6 @@
                     <File Id="lib_shutil.py" Name="shutil.py" />
                     <File Id="lib_signal.py" Name="signal.py" />
                     <File Id="lib_site.py" Name="site.py" />
-                    <File Id="lib_smtpd.py" Name="smtpd.py" />
                     <File Id="lib_smtplib.py" Name="smtplib.py" />
                     <File Id="lib_sndhdr.py" Name="sndhdr.py" />
                     <File Id="lib_socket.py" Name="socket.py" />
@@ -1201,7 +1198,6 @@
                     <File Id="lib_webbrowser.py" Name="webbrowser.py" />
                     <File Id="lib_xdrlib.py" Name="xdrlib.py" />
                     <File Id="lib_zipapp.py" Name="zipapp.py" />
-                    <File Id="lib_zipfile.py" Name="zipfile.py" />
                   </Component>
                   <Directory Id="python_lib___phello__" Name="__phello__">
                     <Component DiskId="1" Guid="129E9DD6-B40E-4572-A1FD-EBF7028CC3E3" Id="python_lib___phello__" Location="either">
@@ -1303,63 +1299,6 @@
                       <File Id="lib_dbm_gnu.py" Name="gnu.py" />
                       <File Id="lib_dbm_ndbm.py" Name="ndbm.py" />
                     </Component>
-                  </Directory>
-                  <Directory Id="python_lib_distutils" Name="distutils">
-                    <Component DiskId="1" Guid="" Id="python_lib_distutils" Location="either">
-                      <File Id="lib_distutils___init__.py" Name="__init__.py" />
-                      <File Id="lib_distutils__msvccompiler.py" Name="_msvccompiler.py" />
-                      <File Id="lib_distutils_archive_util.py" Name="archive_util.py" />
-                      <File Id="lib_distutils_bcppcompiler.py" Name="bcppcompiler.py" />
-                      <File Id="lib_distutils_ccompiler.py" Name="ccompiler.py" />
-                      <File Id="lib_distutils_cmd.py" Name="cmd.py" />
-                      <File Id="lib_distutils_config.py" Name="config.py" />
-                      <File Id="lib_distutils_core.py" Name="core.py" />
-                      <File Id="lib_distutils_cygwinccompiler.py" Name="cygwinccompiler.py" />
-                      <File Id="lib_distutils_debug.py" Name="debug.py" />
-                      <File Id="lib_distutils_dep_util.py" Name="dep_util.py" />
-                      <File Id="lib_distutils_dir_util.py" Name="dir_util.py" />
-                      <File Id="lib_distutils_dist.py" Name="dist.py" />
-                      <File Id="lib_distutils_errors.py" Name="errors.py" />
-                      <File Id="lib_distutils_extension.py" Name="extension.py" />
-                      <File Id="lib_distutils_fancy_getopt.py" Name="fancy_getopt.py" />
-                      <File Id="lib_distutils_file_util.py" Name="file_util.py" />
-                      <File Id="lib_distutils_filelist.py" Name="filelist.py" />
-                      <File Id="lib_distutils_log.py" Name="log.py" />
-                      <File Id="lib_distutils_msvc9compiler.py" Name="msvc9compiler.py" />
-                      <File Id="lib_distutils_msvccompiler.py" Name="msvccompiler.py" />
-                      <File Id="lib_distutils_spawn.py" Name="spawn.py" />
-                      <File Id="lib_distutils_sysconfig.py" Name="sysconfig.py" />
-                      <File Id="lib_distutils_text_file.py" Name="text_file.py" />
-                      <File Id="lib_distutils_unixccompiler.py" Name="unixccompiler.py" />
-                      <File Id="lib_distutils_util.py" Name="util.py" />
-                      <File Id="lib_distutils_version.py" Name="version.py" />
-                      <File Id="lib_distutils_versionpredicate.py" Name="versionpredicate.py" />
-                    </Component>
-                    <Directory Id="python_lib_distutils_command" Name="command">
-                      <Component DiskId="1" Guid="" Id="python_lib_distutils_command" Location="either">
-                        <File Id="lib_distutils_command___init__.py" Name="__init__.py" />
-                        <File Id="lib_distutils_command_bdist.py" Name="bdist.py" />
-                        <File Id="lib_distutils_command_bdist_dumb.py" Name="bdist_dumb.py" />
-                        <File Id="lib_distutils_command_bdist_rpm.py" Name="bdist_rpm.py" />
-                        <File Id="lib_distutils_command_build.py" Name="build.py" />
-                        <File Id="lib_distutils_command_build_clib.py" Name="build_clib.py" />
-                        <File Id="lib_distutils_command_build_ext.py" Name="build_ext.py" />
-                        <File Id="lib_distutils_command_build_py.py" Name="build_py.py" />
-                        <File Id="lib_distutils_command_build_scripts.py" Name="build_scripts.py" />
-                        <File Id="lib_distutils_command_check.py" Name="check.py" />
-                        <File Id="lib_distutils_command_clean.py" Name="clean.py" />
-                        <File Id="lib_distutils_command_config.py" Name="config.py" />
-                        <File Id="lib_distutils_command_install.py" Name="install.py" />
-                        <File Id="lib_distutils_command_install_data.py" Name="install_data.py" />
-                        <File Id="lib_distutils_command_install_egg_info.py" Name="install_egg_info.py" />
-                        <File Id="lib_distutils_command_install_headers.py" Name="install_headers.py" />
-                        <File Id="lib_distutils_command_install_lib.py" Name="install_lib.py" />
-                        <File Id="lib_distutils_command_install_scripts.py" Name="install_scripts.py" />
-                        <File Id="lib_distutils_command_register.py" Name="register.py" />
-                        <File Id="lib_distutils_command_sdist.py" Name="sdist.py" />
-                        <File Id="lib_distutils_command_upload.py" Name="upload.py" />
-                      </Component>
-                    </Directory>
                   </Directory>
                   <Directory Id="python_lib_email" Name="email">
                     <Component DiskId="1" Guid="5F0DFD7E-19D6-4218-A0A2-4FEBD4AA6A40" Id="python_lib_email" Location="either">
@@ -1831,6 +1770,7 @@
                   <Directory Id="python_lib_sqlite3" Name="sqlite3">
                     <Component DiskId="1" Guid="BE3250BD-DFB3-40E8-9DDA-6BBD0E29FD7F" Id="python_lib_sqlite3" Location="either">
                       <File Id="lib_sqlite3___init__.py" Name="__init__.py" />
+                      <File Id="lib_sqlite3___main__.py" Name="__main__.py" />
                       <File Id="lib_sqlite3_dbapi2.py" Name="dbapi2.py" />
                       <File Id="lib_sqlite3_dump.py" Name="dump.py" />
                     </Component>
@@ -1966,6 +1906,18 @@
                         <File Id="python_lib_zoneinfo__tzpath.py" Name="_tzpath.py" />
                         <File Id="python_lib_zoneinfo__zoneinfo.py" Name="_zoneinfo.py" />
                     </Component>
+                  </Directory>
+                  <Directory Id="python_lib_zipfile" Name="zipfile">
+                    <Component DiskId="1" Guid="62A32000-DCA5-4CC1-8E74-0B7A5633F93A" Id="python_lib_zipfile" Location="either">
+                      <File Id="python_lib_zipfile__init__.py" Name="__init__.py" />
+                      <File Id="python_lib_zipfile__main__.py" Name="__main__.py" />
+                    </Component>
+                    <Directory Id="python_lib_zipfile__path" Name="_path">
+                      <Component DiskId="1" Guid="14C03856-195B-4CEC-AE3D-03B6F46C4E3C" Id="python_lib_zipfile__path" Location="either">
+                        <File Id="python_lib_zipfile__path__init__.py" Name="__init__.py" />
+                        <File Id="python_lib_zipfile__path_glob.py" Name="glob.py" />
+                      </Component>
+                    </Directory>
                   </Directory>
                 </Directory>
                 <Directory Id="python_site_packages" Name="site-packages">

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2020, Oracle and/or its affiliates.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -178,7 +178,10 @@ static PyTypeObject PyGRTMethodObjectType = {
   0,  //  tp_version_tag
 
   0, //  tp_finalize
-#if PY_VERSION_HEX >= 0x03090000
+#if PY_VERSION_HEX >= 0x030c0000
+  nullptr, // tp_vectorcall
+  0        // tp_watched
+#elif PY_VERSION_HEX >= 0x03090000
   nullptr   //  tp_vectorcall
 #elif PY_VERSION_HEX >= 0x03080000
   nullptr,  //  tp_vectorcall
@@ -523,7 +526,10 @@ static PyTypeObject PyGRTObjectObjectType = {
   0,    //  tp_version_tag
 
   0, //  tp_finalize
-#if PY_VERSION_HEX >= 0x03090000
+#if PY_VERSION_HEX >= 0x030c0000
+  nullptr, // tp_vectorcall
+  0        // tp_watched
+#elif PY_VERSION_HEX >= 0x03090000
   nullptr   //  tp_vectorcall
 #elif PY_VERSION_HEX >= 0x03080000
   nullptr,  //  tp_vectorcall

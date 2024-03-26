@@ -164,8 +164,8 @@
       <ComponentRef Id="python_lib_ctypes_macholib" />
       <ComponentRef Id="python_lib_curses" />
       <ComponentRef Id="python_lib_dbm" />
-      <ComponentRef Id="python_lib_distutils" />
-      <ComponentRef Id="python_lib_distutils_command" />
+      <ComponentRef Id="python_lib_zipfile" />
+      <ComponentRef Id="python_lib_zipfile__path" />
       <ComponentRef Id="python_lib_email" />
       <ComponentRef Id="python_lib_email_mime" />
       <ComponentRef Id="python_lib_encodings" />

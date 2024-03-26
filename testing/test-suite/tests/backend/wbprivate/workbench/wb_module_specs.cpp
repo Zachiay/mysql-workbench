@@ -98,6 +98,7 @@ $describe("wb_module tests for Workbench") {
     $expect(isOsSupportedProxy("Ubuntu 22.04")).toBeTrue();
     $expect(isOsSupportedProxy("Ubuntu 22.10")).toBeTrue();
     $expect(isOsSupportedProxy("Ubuntu 23.04")).toBeTrue();
+    $expect(isOsSupportedProxy("Ubuntu 23.10")).toBeTrue();
 
     // red-hat based
     $expect(isOsSupportedProxy("Red Hat Enterprise Linux Server release")).toBeFalse();
@@ -153,8 +154,9 @@ $describe("wb_module tests for Workbench") {
     $expect(isOsSupportedProxy("Fedora release 34 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 35 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 36 x86_64")).toBeFalse();
-    $expect(isOsSupportedProxy("Fedora release 37 x86_64")).toBeTrue();
+    $expect(isOsSupportedProxy("Fedora release 37 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 38 x86_64")).toBeTrue();
+    $expect(isOsSupportedProxy("Fedora release 39 x86_64")).toBeTrue();
   });
 }
 }

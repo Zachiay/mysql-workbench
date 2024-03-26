@@ -96,9 +96,7 @@ namespace grt {
   class MYSQLGRT_PUBLIC PythonContextHelper {
   private:
     PyThreadState *_main_thread_state;
-#ifdef _MSC_VER
     PyConfig _config;
-#endif
 
   protected:
     PythonContextHelper(const std::string &module_path);

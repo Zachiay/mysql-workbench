@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2007, 2022, Oracle and/or its affiliates.
+ * Copyright (c) 2007, 2024, Oracle and/or its affiliates.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -217,7 +217,7 @@ int WorkbenchImpl::isOsSupported(const std::string &os) {
     "Ubuntu 22.04", "Ubuntu 22.10", "Ubuntu 23.04", "Ubuntu 23.10", "Debian 10",
 
     "Red Hat Enterprise Linux release 9",        // Oracle 9.0: Red Hat Enterprise Linux release 9.0 (Plow)
-    "Fedora release 37", "Fedora release 38", "CentOS release 7",
+    "Fedora release 38", "Fedora release 39", "CentOS release 7",
 
     "Windows 10", "Windows Server 2016", "Windows Server 2019", 
     "Windows 11", "Windows Server 2022",
