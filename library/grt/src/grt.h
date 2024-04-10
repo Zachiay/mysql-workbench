@@ -36,6 +36,7 @@
 #include <stdexcept>
 #include <boost/function.hpp>
 #include <libxml/xmlmemory.h>
+#include <libxml/tree.h>
 #include "base/threading.h"
 #include <string>
 #include <gmodule.h>

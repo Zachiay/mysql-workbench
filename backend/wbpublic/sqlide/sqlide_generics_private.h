@@ -31,6 +31,7 @@
 #include <sqlite/query.hpp>
 #include <sqlite/execute.hpp>
 #include <ctime>
+#include <cstdint>
 
 namespace sqlide {
 

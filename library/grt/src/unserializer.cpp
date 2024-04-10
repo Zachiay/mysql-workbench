@@ -402,7 +402,7 @@ ValueRef internal::Unserializer::unserialize_xmldata(const char *data, size_t si
   xmlDocPtr doc = xmlReadMemory(data, (int)size, NULL, NULL, XML_PARSE_NOENT);
 
   if (!doc) {
-    xmlErrorPtr error = xmlGetLastError();
+    auto error = xmlGetLastError();
 
     if (error)
       throw std::runtime_error(base::strfmt("Could not parse XML data. Line %d, %s", error->line, error->message));

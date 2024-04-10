@@ -26,6 +26,7 @@
 
 #include <string>
 #include <list>
+#include <cstdint>
 
 #include "base/threading.h"
 
