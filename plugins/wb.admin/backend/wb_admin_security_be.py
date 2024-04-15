@@ -222,7 +222,7 @@ def acl_compare(t1, t2):
 
 
 def escape_schema_name(s):
-    return s.replace("\\", "\\\\").replace("_", "\_").replace("%", "\%")
+    return s.replace("\\", "\\\\").replace("_", r"\_").replace("%", r"\%")
 
 
 class AdminSecurity(object):

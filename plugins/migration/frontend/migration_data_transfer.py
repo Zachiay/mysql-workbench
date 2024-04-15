@@ -599,7 +599,7 @@ IF [%arg_source_password%] == [] (
             f.write("REM Creation of file with table definitions for copytable\n\n")
 
             # Creates a temporary file name with the tables to be migrated
-            filename = '%TMP%\wb_tables_to_migrate.txt'
+            filename = r'%TMP%\wb_tables_to_migrate.txt'
             f.write("set table_file=%s\n" % filename)
             f.write("TYPE NUL > %s\n" % filename)
 

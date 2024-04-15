@@ -26,7 +26,7 @@ debug = 0
 
 class MiniTemplate:
     def __init__(self, templ):
-        self._tokens = re.split("({{[^}]+}}|\[\[[^]]+\]\])", templ)
+        self._tokens = re.split(r"({{[^}]+}}|\[\[[^]]+\]\])", templ)
 
     def t2l(self, tok):
         return "line %s " % sum([tok.count("\n") for tok in self._tokens[:tok]])

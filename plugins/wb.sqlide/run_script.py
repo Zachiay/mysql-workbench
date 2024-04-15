@@ -247,7 +247,7 @@ class ParameterDialog(mforms.Form):
         try:
             self.preview_data = open(file).read(4098)
             self.detected_charset = None
-            r = re.compile("/\*[^ ]* SET NAMES ([a-zA-Z0-9_]*) \*/")
+            r = re.compile(r"/\*[^ ]* SET NAMES ([a-zA-Z0-9_]*) \*/")
             # try to detect the charset name from the SET NAMES line
             for line in self.preview_data.split("\n"):
                 if line.startswith("/*"):

@@ -174,11 +174,11 @@ class ThreadedInputValidator(object):
             estimate = 1
             if len(passwd) >= 12:
                 estimate += 1
-            if re.search('\d+', passwd):
+            if re.search(r'\d+', passwd):
                 estimate += 1
             if re.search('[a-z]', passwd) and re.search('[A-Z]', passwd):
                 estimate += 1
-            if re.search('(\W|_)+', passwd):
+            if re.search(r'(\W|_)+', passwd):
                 estimate += 1
 
             return  1 if estimate < 3 else (
