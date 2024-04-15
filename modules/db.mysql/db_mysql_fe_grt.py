@@ -394,7 +394,7 @@ def getServerVersion(connection):
         result = conn.executeQuery("SHOW VARIABLES LIKE 'version'")
         if result and result.nextRow():
             import re
-            p = re.match("([0-9]*)\.([0-9]*)\.([0-9]*)", result.stringByIndex(2))
+            p = re.match(r"([0-9]*)\.([0-9]*)\.([0-9]*)", result.stringByIndex(2))
             if p and p.groups():
                 version = grt.classes.GrtVersion()
                 ver_parts = [int(n) for n in p.groups()] + [0]*4
