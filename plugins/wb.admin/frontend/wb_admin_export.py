@@ -113,9 +113,9 @@ def get_mysqldump_version():
         log_error("Error retrieving version from %s:\n%s (exit %s)"%(path, output, rc))
         return None
       
-    regexp = ".*Ver ([\d.a-z]+).*"
+    regexp = r".*Ver ([\d.a-z]+).*"
     if ("Distrib" in output):
-        regexp = ".*Distrib ([\d.a-z]+).*"
+        regexp = r".*Distrib ([\d.a-z]+).*"
     
     s = re.match(regexp, output)
     

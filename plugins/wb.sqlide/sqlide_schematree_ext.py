@@ -863,7 +863,7 @@ class CodeGenerator:
             if rs and rs.goToFirstRow():
                 sql = rs.stringFieldValueByName('Create Procedure')
                 if sql:
-                    s = re.match("(CREATE .* PROCEDURE [^(]*\()", sql)
+                    s = re.match(r"(CREATE .* PROCEDURE [^(]*\()", sql)
                     if s:
                         args = tokenize_argument_list(sql[len(s.groups()[0])-1:])
                         parts.append("CALL %s.%s(%s);\n" % (esc_ident(obj.schemaName), esc_ident(obj.name),
@@ -877,7 +877,7 @@ class CodeGenerator:
             if rs and rs.goToFirstRow():
                 sql = rs.stringFieldValueByName('Create Function')
                 if sql:
-                    s = re.match("(CREATE .* FUNCTION [^(]*\()", sql)
+                    s = re.match(r"(CREATE .* FUNCTION [^(]*\()", sql)
                     if s:
                         args = tokenize_argument_list(sql[len(s.groups()[0])-1:])
                         parts.append("%s.%s(%s)" % (esc_ident(obj.schemaName), esc_ident(obj.name),

@@ -116,7 +116,7 @@ def is_opt_deprecated(vd, vs):
 def parse_version_str(version_str):
     version = None
     try:
-        res = re.match("([0-9]+)\.([0-9]+)\.([0-9]+)|([0-9]+)\.([0-9]+)", version_str)
+        res = re.match(r"([0-9]+)\.([0-9]+)\.([0-9]+)|([0-9]+)\.([0-9]+)", version_str)
         if res:
             tokens = res.groups()
             if tokens[0] is not None:

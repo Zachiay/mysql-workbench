@@ -143,7 +143,7 @@ class RenderBox(mforms.PyDrawBox):
             return "--"
 
         # find and evaluate all embedded ${expressions}
-        for m in re.findall("(\${[^}]*})", text):
+        for m in re.findall(r"(\${[^}]*})", text):
             value = eval(m[2:-1] % self.variable_values)
             text = text.replace(m, str(value))
 

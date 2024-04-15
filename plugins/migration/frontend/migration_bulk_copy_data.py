@@ -56,49 +56,49 @@ class ImportScriptWindows(ImportScript):
     def generate_import_script(self, connection_args, path_to_file, schema_name):
         output = ['@ECHO OFF']
 
-        output.append('echo Started load data. Please wait.')
+        output.append(r'echo Started load data. Please wait.')
         
-        output.append('SET MYPATH=%%~dp0')
+        output.append(r'SET MYPATH=%%~dp0')
         
-        output.append('IF EXIST %%%%MYPATH%%%%%s del /F %%%%MYPATH%%%%%s' % (self.error_log_name, self.error_log_name))
-        output.append("SET command=mysql.exe -h127.0.0.1 -P%s -u%s -p -s -N information_schema -e \"SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = 'datadir'\" 2^>^> %%%%MYPATH%%%%%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
+        output.append(r'IF EXIST %%%%MYPATH%%%%%s del /F %%%%MYPATH%%%%%s' % (self.error_log_name, self.error_log_name))
+        output.append(r"SET command=mysql.exe -h127.0.0.1 -P%s -u%s -p -s -N information_schema -e \"SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = 'datadir'\" 2^>^> %%%%MYPATH%%%%%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
 
-        output.append('FOR /F "tokens=* USEBACKQ" %%%%F IN ^(^`%%command%%^`^) DO ^(')
-        output.append('    SET DADADIR=%%%%F')
-        output.append('^)')
+        output.append(r'FOR /F "tokens=* USEBACKQ" %%%%F IN ^(^`%%command%%^`^) DO ^(')
+        output.append(r'    SET DADADIR=%%%%F')
+        output.append(r'^)')
 
-        output.append('if %%ERRORLEVEL%% GEQ 1 ^(')
-        output.append('    echo Script has failed. See the log file for details.')
-        output.append('    exit /b 1')
-        output.append('^)')
+        output.append(r'if %%ERRORLEVEL%% GEQ 1 ^(')
+        output.append(r'    echo Script has failed. See the log file for details.')
+        output.append(r'    exit /b 1')
+        output.append(r'^)')
 
-        output.append('pushd %%DADADIR%%')
+        output.append(r'pushd %%DADADIR%%')
 
-        output.append('mkdir %s_#####_import' % schema_name)
+        output.append(r'mkdir %s_#####_import' % schema_name)
         
-        output.append('xcopy %%%%MYPATH%%%%*.csv %s_#####_import\* 2^>^> %%%%MYPATH%%%%%s' % (schema_name, self.error_log_name))
-        output.append('if %%ERRORLEVEL%% GEQ 1 ^(')
-        output.append('    echo Script has failed. See the log file for details.')
-        output.append('    exit /b 1')
-        output.append('^)')
+        output.append(r'xcopy %%%%MYPATH%%%%*.csv %s_#####_import\* 2^>^> %%%%MYPATH%%%%%s' % (schema_name, self.error_log_name))
+        output.append(r'if %%ERRORLEVEL%% GEQ 1 ^(')
+        output.append(r'    echo Script has failed. See the log file for details.')
+        output.append(r'    exit /b 1')
+        output.append(r'^)')
         
-        output.append('xcopy %%%%MYPATH%%%%*.sql %s_#####_import\* 2^>^> %%%%MYPATH%%%%%s' % (schema_name, self.error_log_name))
-        output.append('if %%ERRORLEVEL%% GEQ 1 ^(')
-        output.append('    echo Script has failed. See the log file for details.')
-        output.append('    exit /b 1')
-        output.append('^)')
+        output.append(r'xcopy %%%%MYPATH%%%%*.sql %s_#####_import\* 2^>^> %%%%MYPATH%%%%%s' % (schema_name, self.error_log_name))
+        output.append(r'if %%ERRORLEVEL%% GEQ 1 ^(')
+        output.append(r'    echo Script has failed. See the log file for details.')
+        output.append(r'    exit /b 1')
+        output.append(r'^)')
         
         
-        output.append('mysql.exe -h127.0.0.1 -P%s -u%s -p ^< %s_#####_import\%s 2^>^> %%%%MYPATH%%%%%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
-        output.append('if %%ERRORLEVEL%% GEQ 1 ^(')
-        output.append('    echo Script has failed. See the log file for details.')
-        output.append('    exit /b 1')
-        output.append('^)')
+        output.append(r'mysql.exe -h127.0.0.1 -P%s -u%s -p ^< %s_#####_import\%s 2^>^> %%%%MYPATH%%%%%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
+        output.append(r'if %%ERRORLEVEL%% GEQ 1 ^(')
+        output.append(r'    echo Script has failed. See the log file for details.')
+        output.append(r'    exit /b 1')
+        output.append(r'^)')
         
-        output.append('rmdir %s_#####_import /s /q' % schema_name)
-        output.append('echo Finished load data')
-        output.append('popd')
-        output.append('pause')
+        output.append(r'rmdir %s_#####_import /s /q' % schema_name)
+        output.append(r'echo Finished load data')
+        output.append(r'popd')
+        output.append(r'pause')
         return output
 
 
@@ -112,46 +112,46 @@ class ImportScriptLinux(ImportScript):
 
     def generate_import_script(self, connection_args, path_to_file, schema_name):
         output = ['#!/bin/bash']
-        output.append('MYPATH=\`pwd\`')
+        output.append(r'MYPATH=\`pwd\`')
         
-        output.append('if [ -f \$MYPATH/%s ] ; then' % self.error_log_name)
-        output.append('    rm \$MYPATH/%s' % self.error_log_name) 
-        output.append('fi')
+        output.append(r'if [ -f \$MYPATH/%s ] ; then' % self.error_log_name)
+        output.append(r'    rm \$MYPATH/%s' % self.error_log_name) 
+        output.append(r'fi')
         
-        output.append("TARGET_DIR=\`MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s -s -N information_schema -e 'SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = \\\"datadir\\\"'\` 2>> \$MYPATH/%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r"TARGET_DIR=\`MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s -s -N information_schema -e 'SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = \\\"datadir\\\"'\` 2>> \$MYPATH/%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('pushd \$TARGET_DIR')
+        output.append(r'pushd \$TARGET_DIR')
         
-        output.append('mkdir %s_#####_import' % schema_name)
+        output.append(r'mkdir %s_#####_import' % schema_name)
         
-        output.append('cp \$MYPATH/*.csv %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'cp \$MYPATH/*.csv %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('cp \$MYPATH/*.sql %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'cp \$MYPATH/*.sql %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('echo Started load data. Please wait.')
-        output.append('MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s < %s_#####_import/%s 2>> \$MYPATH/%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'echo Started load data. Please wait.')
+        output.append(r'MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s < %s_#####_import/%s 2>> \$MYPATH/%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('echo Finished load data')
+        output.append(r'echo Finished load data')
         
-        output.append('rm -rf %s_#####_import' % schema_name)
+        output.append(r'rm -rf %s_#####_import' % schema_name)
         
-        output.append('popd')
+        output.append(r'popd')
         #output.append('read -p Press [Enter] key to continue...')
         return output
 
@@ -166,46 +166,46 @@ class ImportScriptDarwin(ImportScript):
 
     def generate_import_script(self, connection_args, path_to_file, schema_name):
         output = ['#!/bin/bash']
-        output.append('MYPATH=\`pwd\`')
+        output.append(r'MYPATH=\`pwd\`')
         
-        output.append('if [ -f \$MYPATH/%s ] ; then' % self.error_log_name)
-        output.append('    rm \$MYPATH/%s' % self.error_log_name) 
-        output.append('fi')
+        output.append(r'if [ -f \$MYPATH/%s ] ; then' % self.error_log_name)
+        output.append(r'    rm \$MYPATH/%s' % self.error_log_name) 
+        output.append(r'fi')
         
-        output.append("TARGET_DIR=\`MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s -s -N information_schema -e 'SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = \\\"datadir\\\"'\` 2>> \$MYPATH/%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r"TARGET_DIR=\`MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s -s -N information_schema -e 'SELECT Variable_Value FROM GLOBAL_VARIABLES WHERE Variable_Name = \\\"datadir\\\"'\` 2>> \$MYPATH/%s" % (connection_args['target_port'], connection_args['target_user'], self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('pushd \$TARGET_DIR')
+        output.append(r'pushd \$TARGET_DIR')
         
-        output.append('mkdir %s_#####_import' % schema_name)
+        output.append(r'mkdir %s_#####_import' % schema_name)
         
-        output.append('cp \$MYPATH/*.csv %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'cp \$MYPATH/*.csv %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('cp \$MYPATH/*.sql %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'cp \$MYPATH/*.sql %s_#####_import/ 2>> \$MYPATH/%s' % (schema_name, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('echo Started load data. Please wait.')
-        output.append('MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s < %s_#####_import/%s 2>> \$MYPATH/%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
-        output.append('if [ \$? -ne 0 ];then')
-        output.append('   echo Script has failed. See the log file for details.')
-        output.append('   exit 1')
-        output.append('fi')
+        output.append(r'echo Started load data. Please wait.')
+        output.append(r'MYSQL_PWD=$arg_target_password mysql -h127.0.0.1 -P%s -u%s < %s_#####_import/%s 2>> \$MYPATH/%s' % (connection_args['target_port'], connection_args['target_user'], schema_name, path_to_file, self.error_log_name))
+        output.append(r'if [ \$? -ne 0 ];then')
+        output.append(r'   echo Script has failed. See the log file for details.')
+        output.append(r'   exit 1')
+        output.append(r'fi')
         
-        output.append('echo Finished load data')
+        output.append(r'echo Finished load data')
         
-        output.append('rm -rf %s_#####_import' % schema_name)
+        output.append(r'rm -rf %s_#####_import' % schema_name)
         
-        output.append('popd')
+        output.append(r'popd')
         #output.append('read -p Press [Enter] key to continue...')
         return output
 
@@ -234,7 +234,7 @@ class SourceRDBMS:
 
 class SourceRDBMSMssql(SourceRDBMS):
     def get_copy_table_cmd(self, table, connection_args):
-        return 'bcp "SELECT %(select_expression)s FROM %(unquoted_source_schema)s.%(unquoted_source_table)s" queryout %(source_table)s.csv -c -t, -T -S .\%(source_instance)s -U %(source_user)s -P %%arg_source_passwords' % dict(list(table.items()) + list(connection_args.items()))
+        return r'bcp "SELECT %(select_expression)s FROM %(unquoted_source_schema)s.%(unquoted_source_table)s" queryout %(source_table)s.csv -c -t, -T -S .\%(source_instance)s -U %(source_user)s -P %%arg_source_passwords' % dict(list(table.items()) + list(connection_args.items()))
 
 
 
@@ -396,7 +396,7 @@ class DataCopyScriptWindows(DataCopyScript):
             
             f.write('del %s.zip\r\n' % dir_name)    
             f.write('del _zipIt.vbs\r\n')
-            f.write('del /F /Q %s\*.*\r\n' % dir_name)
+            f.write('del /F /Q %s\\*.*\r\n' % dir_name)
             f.write('rmdir %s\r\n' % dir_name)
             f.write('popd\r\n')
         

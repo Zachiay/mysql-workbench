@@ -599,8 +599,8 @@ _process_ops_classes.append(ProcessOpsLinuxRemote)
 
 
 
-WIN_REG_QUERY_PROGRAMFILES = 'reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion /v "ProgramFilesDir"'
-WIN_REG_QUERY_PROGRAMFILES_x86 = 'reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion /v "ProgramFilesDir (x86)"'
+WIN_REG_QUERY_PROGRAMFILES = r'reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion /v "ProgramFilesDir"'
+WIN_REG_QUERY_PROGRAMFILES_x86 = r'reg query HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion /v "ProgramFilesDir (x86)"'
 
 WIN_PROGRAM_FILES_VAR = "%ProgramFiles%"
 WIN_PROGRAM_FILES_X86_VAR = "%ProgramFiles(x86)%"

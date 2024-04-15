@@ -417,7 +417,7 @@ class ContentPreviewPage(WizardPage):
         if serr:
             log_error("There was an error getting file information: %s" % serr)
         import re
-        p = re.compile("^(\w+):\s(\w+)\s\(([0-9\.]+)\)", re.IGNORECASE)
+        p = re.compile(r"^(\w+):\s(\w+)\s\(([0-9\.]+)\)", re.IGNORECASE)
         for line in sout.splitlines():
             if line.startswith("Layer name: "):
                 self.layer_name_lbl.set_text(line.split(':')[1].strip())
