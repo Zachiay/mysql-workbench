@@ -1,4 +1,4 @@
-# Copyright (c) 2007, 2020, Oracle and/or its affiliates.
+# Copyright (c) 2007, 2024, Oracle and/or its affiliates.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License, version 2.0,
@@ -888,7 +888,7 @@ uses_ssh: %i uses_wmi: %i\n""" % (self.server_profile.uses_ssh, self.server_prof
                 os_version = o.getvalue().strip()
 
                 o = io.StringIO()
-                rc = self.server_helper.execute_command('reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion" /v "ProductName"', output_handler=o.write)
+                rc = self.server_helper.execute_command(r'reg query "HKLM\Software\Microsoft\Windows NT\CurrentVersion" /v "ProductName"', output_handler=o.write)
                 if rc == 0:
                     os_name = " ".join(o.getvalue().strip().split("\n")[-1].split()[2:])
                 return os_type, os_name, os_variant, os_version

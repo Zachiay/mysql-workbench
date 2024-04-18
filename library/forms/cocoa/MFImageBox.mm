@@ -39,6 +39,7 @@
     mOwner= aImage;
     mOwner->set_data(self);
     mScale= NO;
+    self.clipsToBounds = YES;
   }
   return self;
 }

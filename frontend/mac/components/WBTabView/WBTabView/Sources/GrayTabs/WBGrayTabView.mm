@@ -30,6 +30,15 @@
 
 @implementation WBGrayTabView
 
+- (instancetype)initWithFrame: (NSRect) frame {
+  self = [super initWithFrame: frame];
+  if (self) {
+    self.clipsToBounds = YES;
+  }
+  
+  return self;
+}
+
 - (NSRect)contentRect {
   NSRect rect = super.contentRect;
   rect.size.height = NSHeight(self.frame) - self.tabAreaHeight;

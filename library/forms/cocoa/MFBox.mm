@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -40,9 +40,7 @@
     mOwner = aBox;
     mOwner->set_data(self);
   }
-  if (@available(iOS 14.0, *)) {
-    self.clipsToBounds = TRUE;
-  }
+  self.clipsToBounds = YES;
   return self;
 }
 
@@ -622,24 +620,6 @@ static void expandVertically(std::vector<ChildEntry> &list, int fraction, bool m
     (*mOwner->signal_resized())();
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
-#if 0
-- (void)drawRect: (NSRect)rect
-{
-  [[NSColor redColor] set];
-  NSFrameRect([self frame]);
-
-  [[NSColor orangeColor] set];
-  NSFrameRect(NSInsetRect([self frame], 5, 5));
-
-  [[NSColor purpleColor] set];
-  for (id view in [self subviews])
-  {
-    NSFrameRect([view frame]);
-  }
-}
-#endif
 
 //----------------------------------------------------------------------------------------------------------------------
 

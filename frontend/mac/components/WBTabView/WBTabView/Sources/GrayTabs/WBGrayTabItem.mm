@@ -60,7 +60,6 @@
                      canClose: canClose];
 	
 	if (self != nil) {
-		// Border.
 		self.borderWidth = 1;
 		CGColorRef c = WB_CGColorCreateCalibratedRGB(0.3, 0.3, 0.3, 0.7);
 		self.borderColor = c;

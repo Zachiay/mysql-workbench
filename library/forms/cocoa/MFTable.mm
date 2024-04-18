@@ -70,6 +70,7 @@ struct CellEntry {
   {
     mOwner = aTable;
     mOwner->set_data(self);
+    self.clipsToBounds = YES;
   }
   return self;
 }

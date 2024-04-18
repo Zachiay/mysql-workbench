@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2011, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -118,7 +118,9 @@ static NSColor* colorFromHexString(const char* hexcolor) {
   if (self) {
     mOwner = item;
     mOwner->set_data(self);
+    self.clipsToBounds = YES;
   }
+  
   return self;
 }
 
@@ -218,7 +220,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
 
         break;
     }
-
+    self.clipsToBounds = YES;
     self.target = self;
     self.action = @selector(perform:);
     self.title = @"";
@@ -306,6 +308,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
       NSSize tsize = toolbar.frame.size;
       [self setFrameSize: NSMakeSize(tsize.height, tsize.height)];
     }
+    self.clipsToBounds = YES;
   }
 }
 
@@ -368,6 +371,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
     }
     else
       self.font = [NSFont systemFontOfSize: [NSFont smallSystemFontSize]];
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -437,6 +441,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
     mOwner->set_data(self);
     self.imageFrameStyle = NSImageFrameNone;
     self.imageScaling = NSImageScaleNone;
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -498,6 +503,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
     [self.cell setSendsSearchStringImmediately: NO];
     self.target = self;
     self.action = @selector(perform:);
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -557,6 +563,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
   if (self) {
     mOwner = item;
     mOwner->set_data(self);
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -611,6 +618,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
     self.action = @selector(perform:);
     self.cell.controlSize = NSControlSizeSmall;
     self.font = [NSFont systemFontOfSize: [NSFont smallSystemFontSize]];
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -677,6 +685,7 @@ static NSColor* colorFromHexString(const char* hexcolor) {
     self = [super initWithFrame: NSMakeRect(0, 0, 100, layoutInfo[type].height)];
 
   if (self) {
+    self.clipsToBounds = YES;
     mOwner = owner;
     mOwner->set_data(self);
     

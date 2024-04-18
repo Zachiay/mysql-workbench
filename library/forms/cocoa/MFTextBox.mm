@@ -37,6 +37,7 @@ using namespace mforms;
   if (self) {
     mOwner = backend;
     self.richText = NO;
+    self.clipsToBounds = YES;
   }
   return self;
 }

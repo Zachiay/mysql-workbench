@@ -45,6 +45,7 @@
     mStyle = mforms::NormalStyle;
 
     mAlignment = mforms::MiddleLeft;
+    self.clipsToBounds = YES;
   }
   return self;
 }

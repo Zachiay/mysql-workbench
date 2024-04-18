@@ -46,6 +46,7 @@
   if (self != nil) {
     expandsByDefault = YES;
     minimumHeight = 100;
+    self.clipsToBounds = YES;
   }
   return self;
 }

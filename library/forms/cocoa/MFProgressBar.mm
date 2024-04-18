@@ -37,7 +37,7 @@
     self.maxValue = 1.0;
     [self setIndeterminate: NO];
     self.minimumSize = { 100, 20 };
-
+    self.clipsToBounds = YES;
     mOwner = pbar;
     mOwner->set_data(self);
   }

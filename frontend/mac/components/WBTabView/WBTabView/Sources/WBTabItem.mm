@@ -102,21 +102,21 @@ extern NSDictionary<NSString *, NSGradient *> *inactiveGradientsLight;
 
 //----------------------------------------------------------------------------------------------------------------------
 
-- (void) drawRect: (NSRect) rect {
-  if (mBackgroundColor == nil) {
-    mBackgroundColor = [NSColor colorWithCalibratedRed: 0.88
-                                                 green: 0.88
-                                                  blue: 0.88
-                                                 alpha: 1];
-  }
+// - (void) drawRect: (NSRect) rect {
+//   if (mBackgroundColor == nil) {
+//     mBackgroundColor = [NSColor colorWithCalibratedRed: 0.88
+//                                                  green: 0.88
+//                                                   blue: 0.88
+//                                                  alpha: 1];
+//   }
   
-  [super drawRect: rect];
+//   [super drawRect: rect];
   
-  if (mBackgroundColor != nil) {
-    [mBackgroundColor set];
-    [NSBezierPath fillRect: rect];
-  }
-}
+//   if (mBackgroundColor != nil) {
+//     [mBackgroundColor set];
+//     [NSBezierPath fillRect: rect];
+//   }
+// }
 
 //----------------------------------------------------------------------------------------------------------------------
 

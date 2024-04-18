@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -83,6 +83,7 @@
   self = [super initWithFrame: frame];
   if (self != nil) {
     mOwner = aTabView;
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -100,6 +101,7 @@ STANDARD_FOCUS_HANDLING(self) // Notify backend when getting first responder sta
 
 - (instancetype)initWithObject: (::mforms::TabView *)aTabView tabType: (mforms::TabViewType)tabType {
   self = [super initWithFrame: NSMakeRect(10, 10, 100, 100)];
+  self.clipsToBounds = YES;
   if (self) {
     BOOL tabSwitcherBelow = NO;
     mTabView = [[DraggingTabView alloc] initWithFrame: NSMakeRect(0, 0, 100, 100) owner: aTabView];

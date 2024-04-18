@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -101,6 +101,14 @@ extern NSDictionary<NSString *, NSGradient *> *inactiveGradientsLight;
 
 @implementation WBRightClickThroughView
 
+// -(instancetype) initWithFrame: (NSRect)frame {
+//   self = [super initWithFrame: frame];
+//   if (self != nil) {
+//     self.clipsToBounds = YES;
+//   }
+//   return self;
+// }
+
 - (void)rightMouseDown: (NSEvent*)event {
   [self.superview rightMouseDown: event];
 }
@@ -121,13 +129,6 @@ extern NSDictionary<NSString *, NSGradient *> *inactiveGradientsLight;
   return isActive
     ? (isDark ? activeColorsDark : activeColorsLight)
     : (isDark ? inactiveColorsDark : inactiveColorsLight);
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-
-- (void)drawRect: (NSRect)rect {
-  [[NSColor colorWithDeviceWhite: 232 / 255.0 alpha:1.0] set];
-  NSRectFill(rect);
 }
 
 //----------------------------------------------------------------------------------------------------------------------

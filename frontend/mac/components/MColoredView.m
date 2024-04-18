@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2011, 2018, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2011, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -42,7 +42,7 @@
   if (self != nil && mColor == nil) {
     useDefault = YES;
     mColor = NSColor.windowBackgroundColor;
-
+    self.clipsToBounds = YES;
     NSWindow *window = NSApplication.sharedApplication.mainWindow;
     [window addObserver: self forKeyPath: @"effectiveAppearance" options: 0 context: nil];
     [self updateColors: window];
@@ -58,7 +58,7 @@
   if (self != nil) {
     useDefault = YES;
     mColor = NSColor.windowBackgroundColor;
-
+    self.clipsToBounds = YES;    
     NSWindow *window = NSApplication.sharedApplication.mainWindow;
     [window addObserver: self forKeyPath: @"effectiveAppearance" options: 0 context: nil];
     [self updateColors: window];

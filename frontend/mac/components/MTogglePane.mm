@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2008, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -46,6 +46,7 @@
 - (instancetype)initWithFrame: (NSRect)frame includeHeader: (BOOL)hasHeader {
   self = [super initWithFrame:frame];
   if (self != nil) {
+    self.clipsToBounds = YES;
     _initializing= YES;
     if (hasHeader) {
       _toggleButton= [[NSButton alloc] initWithFrame:NSMakeRect(5, 5, 13, 13)];
@@ -55,6 +56,7 @@
       _toggleButton.action = @selector(toggle:);
       _toggleButton.target = self;
       _toggleButton.state = NSControlStateValueOn; // expanded by default
+      _toggleButton.clipsToBounds = YES;
       [self addSubview:_toggleButton];
     
       _label= [[NSTextField alloc] initWithFrame:NSMakeRect(20, 3, 20, 20)];
@@ -62,10 +64,10 @@
       [_label setEditable:NO];
       _label.font = [NSFont boldSystemFontOfSize:12];
       [_label setDrawsBackground:NO];
+      _label.clipsToBounds = YES;
       [self addSubview:_label];
     }
-    _buttons= [NSMutableArray array];
-    
+    _buttons= [NSMutableArray array];  
     _initializing = NO;
     _relayouting = NO;
   }

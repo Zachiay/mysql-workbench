@@ -415,6 +415,7 @@ static NSString *extender = @"≫";
 - (instancetype)initWithFrame: (NSRect)frameRect {
   self = [super initWithFrame: frameRect];
   if (self != nil) {
+    self.clipsToBounds = YES;
     // Make editor the default. Object editors rely on this default.
     self.tabStyle = MEditorBottomTabSwitcher;
 

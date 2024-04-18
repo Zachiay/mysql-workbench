@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008, 2018, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2008, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -52,6 +52,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
     _be = owner.backend;
     _nodeId = new bec::NodeId(node);
     _tabItem = tabItem;
+    self.clipsToBounds = YES;
 
     [self setExpandSubviewsByDefault: NO];
     [self setBackgroundColor: NSColor.textBackgroundColor];
@@ -200,6 +201,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
 
   self = [super initWithFrame:NSMakeRect(0, 0, 100, 100)];
   if (self != nil) {
+    self.clipsToBounds = YES;
     self.tabViewType = NSTopTabsBezelBorder;
     
     [self doCustomize];
@@ -210,6 +212,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
     _nodeId= new bec::NodeId(node);
     
     _extraHeight= NSHeight(self.frame) - self.contentSize.height;
+    
   }
   return self;
 }
@@ -742,6 +745,7 @@ static NSDictionary *subtitleTextAttributes;
 - (instancetype)initWithOverview: (WBOverviewPanel*)owner nodeId: (const bec::NodeId&)node {
   self = [super initWithOverview: owner nodeId: node];
   if (self != nil) {
+    self.clipsToBounds = YES;
   }
   return self;
 }

@@ -66,7 +66,7 @@
     [self setHasHorizontalScroller: YES];
     
     self.contentView = [[MFClipView alloc] initWithFrame: NSMakeRect(0, 0, 10, 20)];
-
+    self.clipsToBounds = YES;
     self.drawsBackground = drawBG;
     if (bordered)
       self.borderType = NSLineBorder;

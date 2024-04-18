@@ -37,6 +37,17 @@
 
 @implementation WBSplitView
 
+//----------------------------------------------------------------------------------------------------------------------
+
+-(instancetype)initWithFrame: (NSRect)frameRect {
+  self = [super initWithFrame: frameRect];
+  if (self != nil) {
+    self.clipsToBounds = YES;
+  }
+
+  return self;
+}
+
 @synthesize backgroundColor;
 
 //----------------------------------------------------------------------------------------------------------------------

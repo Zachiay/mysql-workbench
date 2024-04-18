@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -49,6 +49,7 @@
   self = [super initWithFrame:aPanel.bounds];
   if (self) {
     panel = aPanel;
+    self.clipsToBounds = YES;
   }
   return self;
 }
@@ -240,6 +241,7 @@ STANDARD_MOUSE_HANDLING(panel) // Add handling for mouse events.
     mOwner = aPanel;
     mOwner->set_data(self);
     mType = type;
+    self.clipsToBounds = YES;
     switch (type) {
       case mforms::TransparentPanel: // just a container with no background
         [self setTransparent: YES];

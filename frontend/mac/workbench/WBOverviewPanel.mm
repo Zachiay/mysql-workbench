@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008, 2018, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2008, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -49,15 +49,8 @@
   if (self != nil) {
     [self setExpandSubviewsByDefault: NO];
   }
+  self.clipsToBounds = YES;
   return self;
-}
-
-//----------------------------------------------------------------------------------------------------------------------
-
-- (void)drawRect: (NSRect)rect {
-  [NSColor.textBackgroundColor set];
-  NSRectFill(rect);
-  return;
 }
 
 @end
@@ -83,6 +76,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
   self.hasVerticalScroller = YES;
   self.hasHorizontalScroller = NO;
   self.borderType = NSNoBorder;
+  self.clipsToBounds = YES;
   
   _backgroundView = [[WBOverviewBackgroundView alloc] initWithFrame:
                      NSMakeRect(0, 0, self.contentSize.width, self.contentSize.height)];
@@ -324,6 +318,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
     case wb::OverviewBE::OGroup: {
       WBOverviewGroupContainer *groups = [[WBOverviewGroupContainer alloc] initWithOverview: self
                                                                                      nodeId: node];
+      groups.clipsToBounds = YES;
       pane.contentView = groups;
 
       [pane addButton: [NSImage imageNamed: @"collapsing_panel_header_tab_add"]
@@ -390,6 +385,7 @@ static NSString *stringFromNodeId(const bec::NodeId &node) {
                                                  includeHeader: !_noHeaders];
         [pane setLabel: @(label.c_str())];
         pane.autoresizingMask = NSViewWidthSizable | NSViewMaxYMargin;
+        pane.clipsToBounds = YES;
         [_backgroundView addSubview: pane];
         
         id view = [self buildDivision: node
