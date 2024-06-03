@@ -95,10 +95,11 @@ $describe("wb_module tests for Workbench") {
     $expect(isOsSupportedProxy("Ubuntu 20.10")).toBeFalse();
     $expect(isOsSupportedProxy("Ubuntu 21.04")).toBeFalse();
     $expect(isOsSupportedProxy("Ubuntu 21.10")).toBeFalse();
-    $expect(isOsSupportedProxy("Ubuntu 22.04")).toBeTrue();
-    $expect(isOsSupportedProxy("Ubuntu 22.10")).toBeTrue();
+    $expect(isOsSupportedProxy("Ubuntu 22.04")).toBeFalse();
+    $expect(isOsSupportedProxy("Ubuntu 22.10")).toBeFalse();
     $expect(isOsSupportedProxy("Ubuntu 23.04")).toBeTrue();
     $expect(isOsSupportedProxy("Ubuntu 23.10")).toBeTrue();
+    $expect(isOsSupportedProxy("Ubuntu 24.04")).toBeTrue();
 
     // red-hat based
     $expect(isOsSupportedProxy("Red Hat Enterprise Linux Server release")).toBeFalse();
@@ -132,8 +133,8 @@ $describe("wb_module tests for Workbench") {
     $expect(isOsSupportedProxy("..... macOS ..... 11.2 ..... x86_64 .....")).toBeFalse();
     $expect(isOsSupportedProxy("..... macOS 12 ..... x86_64 .....")).toBeFalse();
     $expect(isOsSupportedProxy("macOS 12")).toBeFalse();
-    $expect(isOsSupportedProxy("..... macOS 13 ..... x86_64 .....")).toBeTrue();
-    $expect(isOsSupportedProxy("macOS 13")).toBeTrue();
+    $expect(isOsSupportedProxy("..... macOS 13 ..... x86_64 .....")).toBeFalse();
+    $expect(isOsSupportedProxy("macOS 13")).toBeFalse();
     $expect(isOsSupportedProxy("..... macOS 14 ..... x86_64 .....")).toBeTrue();
     $expect(isOsSupportedProxy("macOS 14")).toBeTrue();
 
@@ -155,8 +156,9 @@ $describe("wb_module tests for Workbench") {
     $expect(isOsSupportedProxy("Fedora release 35 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 36 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 37 x86_64")).toBeFalse();
-    $expect(isOsSupportedProxy("Fedora release 38 x86_64")).toBeTrue();
+    $expect(isOsSupportedProxy("Fedora release 38 x86_64")).toBeFalse();
     $expect(isOsSupportedProxy("Fedora release 39 x86_64")).toBeTrue();
+    $expect(isOsSupportedProxy("Fedora release 40 x86_64")).toBeTrue();
   });
 }
 }
