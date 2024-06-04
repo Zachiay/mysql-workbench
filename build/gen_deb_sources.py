@@ -5,6 +5,7 @@
 
 
 output_distros = [
+    ("noble", "ubuntu24.04", "2404", ""),
     ("mantic", "ubuntu23.10", "2310", ""),
     ("lunar", "ubuntu23.04", "2304", ""),
     ("kinetic", "ubuntu22.10", "2210", ""),
