@@ -45,8 +45,7 @@
               </Component>
 
               <Component DiskId="1" Guid="F7B89C4E-BAA9-44e6-9FB1-F6DB8148790F" Id="Third_Party_Libraries" Location="either">
-                <File Id="file1023" Name="iconv.dll" />
-                <File Id="file1027" Name="libcairo.dll" />
+                <File Id="file1027" Name="cairo-2.dll" />
                 <File Id="libcrypto_3_x64" Name="libcrypto-3-x64.dll" />
                 <?if $(var.SETUP_TYPE) = "debug" ?>
                 <File Id="file1035d" Name="libpng16d.dll" />
@@ -120,7 +119,7 @@
                 <File Id="file113" Name="db.mysql.wbp.dll" />
                 <File Id="file115" Name="grt.db.fe.dll" />
                 <File Id="file116" Name="mysql.forms.dll" />
-                <File Id="file117" Name="mysqlcppconn-9-vs14.dll" />
+                <File Id="file117" Name="mysqlcppconn-10-vs14.dll" />
                 <File Id="file118" Name="sqlide.fe.dll" />
                 <File Id="file122" Name="WbPlugins.dll" />
                 <File Id="file123" Name="wbprivate.be.dll" />

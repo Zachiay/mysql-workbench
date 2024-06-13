@@ -49,7 +49,6 @@
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
     <Import Project="..\..\vsprops\wb_python.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_cpp_std.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
@@ -59,7 +58,6 @@
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
     <Import Project="..\..\vsprops\wb_python.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_cpp_std.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_OSS|x64'" Label="PropertySheets">
@@ -69,7 +67,6 @@
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
     <Import Project="..\..\vsprops\wb_python.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_cpp_std.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
