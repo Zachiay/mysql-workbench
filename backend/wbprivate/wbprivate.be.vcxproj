@@ -47,7 +47,6 @@
     <Import Project="..\..\vsprops\wb_libzip.props" />
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_glib.props" />
     <Import Project="..\..\vsprops\wb_gdal.props" />
     <Import Project="..\..\vsprops\wb_antlr4.props" />
@@ -63,7 +62,6 @@
     <Import Project="..\..\vsprops\wb_libzip.props" />
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_glib.props" />
     <Import Project="..\..\vsprops\wb_gdal.props" />
     <Import Project="..\..\vsprops\wb_antlr4.props" />
@@ -79,7 +77,6 @@
     <Import Project="..\..\vsprops\wb_libzip.props" />
     <Import Project="..\..\vsprops\wb_cppconn.props" />
     <Import Project="..\..\vsprops\wb_libxml.props" />
-    <Import Project="..\..\vsprops\wb_gettext.props" />
     <Import Project="..\..\vsprops\wb_glib.props" />
     <Import Project="..\..\vsprops\wb_gdal.props" />
     <Import Project="..\..\vsprops\wb_antlr4.props" />
