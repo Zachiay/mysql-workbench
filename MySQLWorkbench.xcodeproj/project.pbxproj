@@ -66,7 +66,6 @@
 		27189E5C209B2CEA002EC0D4 /* libgmodule-2.0.0.dylib in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27D6EE282099D65A0050B26B /* libgmodule-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		27189E63209B2D21002EC0D4 /* libvsqlitepp.3.dylib in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27D6EE422099E2460050B26B /* libvsqlitepp.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		27189E68209B2E5A002EC0D4 /* libsqlite3.so in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27189E67209B2E50002EC0D4 /* libsqlite3.so */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		27189E6B209B2E9E002EC0D4 /* libiconv.2.dylib in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27189E6A209B2E84002EC0D4 /* libiconv.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		27189E71209B30E2002EC0D4 /* libcrypto.3.dylib in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27189E70209B30DC002EC0D4 /* libcrypto.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		27189E72209B30EA002EC0D4 /* libssl.3.dylib in Copy Files (dylibs) */ = {isa = PBXBuildFile; fileRef = 27189E6F209B30C7002EC0D4 /* libssl.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		271957B81136BE6C008BAEAB /* Scintilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2744E6800FC1831900E85C33 /* Scintilla.framework */; };
@@ -3974,7 +3973,6 @@
 				27189E58209B28EB002EC0D4 /* libpng16.16.dylib in Copy Files (dylibs) */,
 				27189E5B209B2CE5002EC0D4 /* libglib-2.0.0.dylib in Copy Files (dylibs) */,
 				27189E5C209B2CEA002EC0D4 /* libgmodule-2.0.0.dylib in Copy Files (dylibs) */,
-				27189E6B209B2E9E002EC0D4 /* libiconv.2.dylib in Copy Files (dylibs) */,
 				27189E68209B2E5A002EC0D4 /* libsqlite3.so in Copy Files (dylibs) */,
 				27189E72209B30EA002EC0D4 /* libssl.3.dylib in Copy Files (dylibs) */,
 				27189E63209B2D21002EC0D4 /* libvsqlitepp.3.dylib in Copy Files (dylibs) */,
@@ -4143,7 +4141,6 @@
 		27189E55209B28B4002EC0D4 /* libpixman-1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libpixman-1.0.dylib"; path = "3rd-party-ce/lib/libpixman-1.0.dylib"; sourceTree = "<group>"; };
 		27189E56209B28D8002EC0D4 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = "3rd-party-ce/lib/libpng16.16.dylib"; sourceTree = "<group>"; };
 		27189E67209B2E50002EC0D4 /* libsqlite3.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.so; path = "3rd-party-ce/lib/libsqlite3.so"; sourceTree = "<group>"; };
-		27189E6A209B2E84002EC0D4 /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = "3rd-party-ce/lib/libiconv.2.dylib"; sourceTree = "<group>"; };
 		27189E6F209B30C7002EC0D4 /* libssl.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.3.dylib; path = "3rd-party-ce/lib/libssl.3.dylib"; sourceTree = "<group>"; };
 		27189E70209B30DC002EC0D4 /* libcrypto.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.3.dylib; path = "3rd-party-ce/lib/libcrypto.3.dylib"; sourceTree = "<group>"; };
 		27189E76209B369B002EC0D4 /* libproj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libproj.dylib; path = "3rd-party-ce/lib/libproj.dylib"; sourceTree = "<group>"; };
@@ -9604,7 +9601,6 @@
 				27D6EE402099E2070050B26B /* libgdal.dylib */,
 				27D6EE242099C1580050B26B /* libglib-2.0.0.dylib */,
 				27D6EE282099D65A0050B26B /* libgmodule-2.0.0.dylib */,
-				27189E6A209B2E84002EC0D4 /* libiconv.2.dylib */,
 				2B2E92FD158999890078D08A /* libiodbc.dylib */,
 				270124232099F9D100FE448E /* libmysqlclient.dylib */,
 				271F7448239117CD005B0EEB /* libmysqlcppconn.dylib */,
@@ -14348,7 +14344,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\n\nexecfile=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\nNEWLIBPATH=${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\nPLUGINPATH=${BUILT_PRODUCTS_DIR}/${PLUGINS_FOLDER_PATH}\nEXEPATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\nPYTHONMODULESPATH=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/libraries\n\nRES_SOURCE_PATH_CE=${SRCROOT}/3rd-party-ce\nRES_SOURCE_PATH_SE=${SRCROOT}/3rd-party-se\n\nNEWTARGETPATH=\"@executable_path/../Frameworks\"\nRELNEWTARGETPATH=\"@loader_path/../Frameworks\"\n\nfixer=$SRCROOT/build/fixup_dylib_paths.sh\npythonfixer=$SRCROOT/build/fixup_python_paths.sh\n\n# copy file if it doesnt exist or is newer\nfunction copy() {\n    from=$1\n    to=$2/`basename $from`\n    if [ ! -f $to ] || [ $from -nt $to ]; then\n        cp -f $from $to\n    fi\n}\n\nfunction copySymlink() {\n    fromPath=$1\n    fromDir=`dirname $fromPath`\n    destName=`readlink $fromPath`\n    while [ -L \"$fromDir/$destName\" ]\n    do\n        destName=`readlink $fromDir/$destName`\n    done\n    destPath=$2/$destName\n    if [ ! -f $fromPath ] || [ $fromPath -nt $destPath ]; then\n        cp -f $fromPath $destPath\n    fi\n}\n\n\necho \"Copy special 3rd party libraries into bundle\"\ncopy ${RES_SOURCE_PATH_CE}/lib/libiconv.2.dylib ${NEWLIBPATH} # Own version with other exported symbol names for ODBC.\n\nrm -f ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/License*.txt\nrm -f ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/README*.txt\n\ncopy ${RES_SOURCE_PATH_SE}/bin/ogrinfo ${EXEPATH}\ncopy ${RES_SOURCE_PATH_SE}/bin/ogr2ogr ${EXEPATH}\n\necho \"Copy symlink'ed destinations into bundle\"\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libproj.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libssh.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libzip.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libmysqlcppconn.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libgdal.dylib ${NEWLIBPATH}\n\n# Use commercial libs if wba_audit module is present\nif [ -d ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/plugins/wba_audit ]; then\n    echo \"Copying libraries for standard edition\"\n    copy ${RES_SOURCE_PATH_SE}/lib/mysql/libmysqlclient.*.dylib ${NEWLIBPATH}\n    copy ${RES_SOURCE_PATH_SE}/bin/mysql ${EXEPATH}\n    copy ${RES_SOURCE_PATH_SE}/bin/mysqldump ${EXEPATH}\n\n    copy ${RES_SOURCE_PATH_SE}/lib/libsqlite3.so ${NEWLIBPATH}\n\n    copy ${SRCROOT}/License-commercial.txt ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n    copy ${SRCROOT}/README-commercial.md ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\nelse\n    echo \"Copying libraries for community edition\"\n    copy ${RES_SOURCE_PATH_CE}/lib/mysql/libmysqlclient.*.dylib ${NEWLIBPATH}\n    copy ${RES_SOURCE_PATH_CE}/bin/mysql ${EXEPATH}\n    copy ${RES_SOURCE_PATH_CE}/bin/mysqldump ${EXEPATH}\n\n    copy ${RES_SOURCE_PATH_CE}/lib/libsqlite3.so ${NEWLIBPATH}\n\n    copy ${SRCROOT}/License.txt ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n    copy ${SRCROOT}/README.md ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\nfi\n\n\n# Pre-compile Python module\necho \"Pre-compiling Python code\"\npython3 -m compileall ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\npython3 -O -m compileall ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n\necho \"Adjusting paths\"\n$fixer $execfile\n$fixer ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/wbcopytables\n$fixer $NEWLIBPATH/libwbbase.dylib\n#$fixer $NEWLIBPATH/libgrt.dylib\n#$fixer $NEWLIBPATH/libwbprivate.be.dylib\n#$fixer $NEWLIBPATH/libwbpublic.be.dylib\n\n# Fix frameworks\nfor libpath in \"$NEWLIBPATH/*.framework\"; do\n    $fixer \"$libpath/*\"\ndone\n\n# Fix python modules\nfor libpath in \"$PYTHONMODULESPATH/*.so\"; do\n    CHANGEPATHS='(@executable_path/../Frameworks|/usr/local)' $fixer $libpath\ndone\n\necho \"Adjusting python paths\"\n$pythonfixer $execfile\n$pythonfixer ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/wbcopytables\n$pythonfixer $NEWLIBPATH/libwbbase.dylib\n$pythonfixer $NEWLIBPATH/libgrt.dylib\n$pythonfixer $NEWLIBPATH/libwbprivate.be.dylib\n$pythonfixer $NEWLIBPATH/libwbpublic.be.dylib\n\n# Fix frameworks\nfor libpath in \"$NEWLIBPATH/*.framework\"; do\n    $pythonfixer \"$libpath/*\"\ndone\n\n# Fix python modules\nfor libpath in \"$PYTHONMODULESPATH/*.so\"; do\n    $pythonfixer $libpath\ndone\n\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbbase.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libgrt.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbprivate.be.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbpublic.be.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/_mforms.so\n$pythonfixer ${BUILT_PRODUCTS_DIR}/_cairo.so\n";
+			shellScript = "#!/bin/bash\n\nexecfile=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\nNEWLIBPATH=${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\nPLUGINPATH=${BUILT_PRODUCTS_DIR}/${PLUGINS_FOLDER_PATH}\nEXEPATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\nPYTHONMODULESPATH=${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/libraries\n\nRES_SOURCE_PATH_CE=${SRCROOT}/3rd-party-ce\nRES_SOURCE_PATH_SE=${SRCROOT}/3rd-party-se\n\nNEWTARGETPATH=\"@executable_path/../Frameworks\"\nRELNEWTARGETPATH=\"@loader_path/../Frameworks\"\n\nfixer=$SRCROOT/build/fixup_dylib_paths.sh\npythonfixer=$SRCROOT/build/fixup_python_paths.sh\n\n# copy file if it doesnt exist or is newer\nfunction copy() {\n    from=$1\n    to=$2/`basename $from`\n    if [ ! -f $to ] || [ $from -nt $to ]; then\n        cp -f $from $to\n    fi\n}\n\nfunction copySymlink() {\n    fromPath=$1\n    fromDir=`dirname $fromPath`\n    destName=`readlink $fromPath`\n    while [ -L \"$fromDir/$destName\" ]\n    do\n        destName=`readlink $fromDir/$destName`\n    done\n    destPath=$2/$destName\n    if [ ! -f $fromPath ] || [ $fromPath -nt $destPath ]; then\n        cp -f $fromPath $destPath\n    fi\n}\n\n\necho \"Copy special 3rd party libraries into bundle\"\nrm -f ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/License*.txt\nrm -f ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/README*.txt\n\ncopy ${RES_SOURCE_PATH_SE}/bin/ogrinfo ${EXEPATH}\ncopy ${RES_SOURCE_PATH_SE}/bin/ogr2ogr ${EXEPATH}\n\necho \"Copy symlink'ed destinations into bundle\"\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libproj.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libssh.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libzip.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libmysqlcppconn.dylib ${NEWLIBPATH}\ncopySymlink ${RES_SOURCE_PATH_SE}/lib/libgdal.dylib ${NEWLIBPATH}\n\n# Use commercial libs if wba_audit module is present\nif [ -d ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/plugins/wba_audit ]; then\n    echo \"Copying libraries for standard edition\"\n    copy ${RES_SOURCE_PATH_SE}/lib/mysql/libmysqlclient.*.dylib ${NEWLIBPATH}\n    copy ${RES_SOURCE_PATH_SE}/bin/mysql ${EXEPATH}\n    copy ${RES_SOURCE_PATH_SE}/bin/mysqldump ${EXEPATH}\n\n    copy ${RES_SOURCE_PATH_SE}/lib/libsqlite3.so ${NEWLIBPATH}\n\n    copy ${SRCROOT}/License-commercial.txt ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n    copy ${SRCROOT}/README-commercial.md ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\nelse\n    echo \"Copying libraries for community edition\"\n    copy ${RES_SOURCE_PATH_CE}/lib/mysql/libmysqlclient.*.dylib ${NEWLIBPATH}\n    copy ${RES_SOURCE_PATH_CE}/bin/mysql ${EXEPATH}\n    copy ${RES_SOURCE_PATH_CE}/bin/mysqldump ${EXEPATH}\n\n    copy ${RES_SOURCE_PATH_CE}/lib/libsqlite3.so ${NEWLIBPATH}\n\n    copy ${SRCROOT}/License.txt ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n    copy ${SRCROOT}/README.md ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\nfi\n\n\n# Pre-compile Python module\necho \"Pre-compiling Python code\"\npython3 -m compileall ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\npython3 -O -m compileall ${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\n\necho \"Adjusting paths\"\n$fixer $execfile\n$fixer ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/wbcopytables\n$fixer $NEWLIBPATH/libwbbase.dylib\n#$fixer $NEWLIBPATH/libgrt.dylib\n#$fixer $NEWLIBPATH/libwbprivate.be.dylib\n#$fixer $NEWLIBPATH/libwbpublic.be.dylib\n\n# Fix frameworks\nfor libpath in \"$NEWLIBPATH/*.framework\"; do\n    $fixer \"$libpath/*\"\ndone\n\n# Fix python modules\nfor libpath in \"$PYTHONMODULESPATH/*.so\"; do\n    CHANGEPATHS='(@executable_path/../Frameworks|/usr/local)' $fixer $libpath\ndone\n\necho \"Adjusting python paths\"\n$pythonfixer $execfile\n$pythonfixer ${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/wbcopytables\n$pythonfixer $NEWLIBPATH/libwbbase.dylib\n$pythonfixer $NEWLIBPATH/libgrt.dylib\n$pythonfixer $NEWLIBPATH/libwbprivate.be.dylib\n$pythonfixer $NEWLIBPATH/libwbpublic.be.dylib\n\n# Fix frameworks\nfor libpath in \"$NEWLIBPATH/*.framework\"; do\n    $pythonfixer \"$libpath/*\"\ndone\n\n# Fix python modules\nfor libpath in \"$PYTHONMODULESPATH/*.so\"; do\n    $pythonfixer $libpath\ndone\n\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbbase.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libgrt.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbprivate.be.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/libwbpublic.be.dylib\n$pythonfixer ${BUILT_PRODUCTS_DIR}/_mforms.so\n$pythonfixer ${BUILT_PRODUCTS_DIR}/_cairo.so\n";
 			showEnvVarsInLog = 0;
 		};
 		2731DE7521A2D4E4002EEE8A /* Copy some binaries */ = {
@@ -16608,7 +16604,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16667,7 +16663,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16726,7 +16722,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16785,7 +16781,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -17042,7 +17038,7 @@
 					"$(PROJECT_DIR)/library/cdbc/src",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/library/grt/src",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17064,7 +17060,7 @@
 					"$(PROJECT_DIR)/library/cdbc/src",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/library/grt/src",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17258,7 +17254,7 @@
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
 					"$(PROJECT_DIR)/plugins",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 				);
@@ -17287,7 +17283,7 @@
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
 					"$(PROJECT_DIR)/plugins",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 				);
@@ -17629,7 +17625,7 @@
 					"$(PROJECT_DIR)/ext/scintilla/include",
 					"$(PROJECT_DIR)/backend/wbpublic",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17653,7 +17649,7 @@
 					"$(PROJECT_DIR)/ext/scintilla/include",
 					"$(PROJECT_DIR)/backend/wbpublic",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17676,7 +17672,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/forms/**",
 					"$(PROJECT_DIR)/generated",
@@ -17705,7 +17701,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_MODEL_TUNING = G5;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/forms/**",
 					"$(PROJECT_DIR)/generated",
@@ -17752,7 +17748,7 @@
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -17799,7 +17795,7 @@
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -17908,7 +17904,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/library/grt",
 					"$(PROJECT_DIR)/generated",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
 				);
@@ -17938,7 +17934,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/library/grt",
 					"$(PROJECT_DIR)/generated",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
 				);
@@ -18201,7 +18197,7 @@
 					"$(PROJECT_DIR)/library/canvas/src",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/plugins/db.mysql",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -18228,7 +18224,7 @@
 					"$(PROJECT_DIR)/library/canvas/src",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/plugins/db.mysql",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -18365,7 +18361,7 @@
 					"$(PROJECT_DIR)/library/ssh",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(PROJECT_DIR)/3rd-party-ce/lib/libzip/include",
 					"$(inherited)",
@@ -18414,7 +18410,7 @@
 					"$(PROJECT_DIR)/library/ssh",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(PROJECT_DIR)/3rd-party-ce/lib/libzip/include",
 					"$(inherited)",
@@ -18961,7 +18957,7 @@
 					"$(PROJECT_DIR)/library/dbc/src",
 					"$(PROJECT_DIR)/library/forms",
 					"$(PROJECT_DIR)/library/parsers",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -19016,7 +19012,7 @@
 					"$(PROJECT_DIR)/library/dbc/src",
 					"$(PROJECT_DIR)/library/forms",
 					"$(PROJECT_DIR)/library/parsers",
-					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
+					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",

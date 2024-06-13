@@ -619,7 +619,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/src\"",
 					"\"$(SRCROOT)/src/aal/macos\"",
-					"\"$(SRCROOT)/3rd-party-ce/include/cppconn/\"",
+					"\"$(SRCROOT)/3rd-party-ce/include/mysql-cppconn/jdbc\"",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd-party-ce/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,7 +632,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/src\"",
 					"\"$(SRCROOT)/src/aal/macos\"",
-					"\"$(SRCROOT)/3rd-party-ce/include/cppconn/\"",
+					"\"$(SRCROOT)/3rd-party-ce/include/mysql-cppconn/jdbc/\"",
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd-party-ce/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";

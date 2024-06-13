@@ -177,7 +177,7 @@ fi
        -DUSE_BUNDLED_MYSQLDUMP=1 \
 %endif
        -DMySQLCppConn_LIBRARIES="-L%{bundles_path}/lib -lmysqlcppconn" \
-       -DMySQLCppConn_INCLUDE_DIR=%{bundles_path}/include/cppconn \
+       -DMySQLCppConn_INCLUDE_DIR=%{bundles_path}/include/mysql-cppconn/jdbc \
        -DIODBC_CONFIG_PATH=%{bundles_path}/bin/iodbc-config \
        -DIODBC_INCLUDE_PATH=%{bundles_path}/include \
        -DRAPIDJSON_INCLUDE_DIR=%{bundles_path}/include \
