@@ -17038,7 +17038,7 @@
 					"$(PROJECT_DIR)/library/cdbc/src",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/library/grt/src",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17060,7 +17060,7 @@
 					"$(PROJECT_DIR)/library/cdbc/src",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/library/grt/src",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17254,7 +17254,7 @@
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
 					"$(PROJECT_DIR)/plugins",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 				);
@@ -17283,7 +17283,7 @@
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
 					"$(PROJECT_DIR)/plugins",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 				);
@@ -17625,7 +17625,7 @@
 					"$(PROJECT_DIR)/ext/scintilla/include",
 					"$(PROJECT_DIR)/backend/wbpublic",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17649,7 +17649,7 @@
 					"$(PROJECT_DIR)/ext/scintilla/include",
 					"$(PROJECT_DIR)/backend/wbpublic",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -17672,7 +17672,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/forms/**",
 					"$(PROJECT_DIR)/generated",
@@ -17701,7 +17701,7 @@
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_MODEL_TUNING = G5;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/forms/**",
 					"$(PROJECT_DIR)/generated",
@@ -17748,7 +17748,7 @@
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -17795,7 +17795,7 @@
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/library/parsers",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -17904,7 +17904,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/library/grt",
 					"$(PROJECT_DIR)/generated",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
 				);
@@ -17934,7 +17934,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/library/grt",
 					"$(PROJECT_DIR)/generated",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
 				);
@@ -18197,7 +18197,7 @@
 					"$(PROJECT_DIR)/library/canvas/src",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/plugins/db.mysql",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -18224,7 +18224,7 @@
 					"$(PROJECT_DIR)/library/canvas/src",
 					"$(PROJECT_DIR)/library/grt/src",
 					"$(PROJECT_DIR)/plugins/db.mysql",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(inherited)",
 				);
 				INSTALL_PATH = "@executable_path/../PlugIns";
@@ -18361,7 +18361,7 @@
 					"$(PROJECT_DIR)/library/ssh",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(PROJECT_DIR)/3rd-party-ce/lib/libzip/include",
 					"$(inherited)",
@@ -18410,7 +18410,7 @@
 					"$(PROJECT_DIR)/library/ssh",
 					"$(PROJECT_DIR)/generated",
 					"$(PROJECT_DIR)/modules",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(PROJECT_DIR)/3rd-party-ce/lib/libzip/include",
 					"$(inherited)",
@@ -18957,7 +18957,7 @@
 					"$(PROJECT_DIR)/library/dbc/src",
 					"$(PROJECT_DIR)/library/forms",
 					"$(PROJECT_DIR)/library/parsers",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
@@ -19012,7 +19012,7 @@
 					"$(PROJECT_DIR)/library/dbc/src",
 					"$(PROJECT_DIR)/library/forms",
 					"$(PROJECT_DIR)/library/parsers",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
 					"$(inherited)",
 					"$(PROJECT_DIR)/3rd-party-ce/Python/Python.framework/Versions/Current/Headers",
