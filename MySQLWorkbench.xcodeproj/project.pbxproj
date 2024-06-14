@@ -16604,7 +16604,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16663,7 +16663,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16722,7 +16722,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
@@ -16781,7 +16781,7 @@
 					"$(PROJECT_DIR)/plugins/db.mysql/backend",
 					"$(PROJECT_DIR)/testing/test-suite/tests",
 					"$(PROJECT_DIR)/3rd-party-ce/include/antlr4-runtime",
-					"$(PROJECT_DIR)/3rd-party-ce/include/mysql-cppconn/jdbc",
+					"$(PROJECT_DIR)/3rd-party-ce/include/cppconn",
 					"$(PROJECT_DIR)/3rd-party-ce/include/rapidjson",
 					"$(inherited)",
 				);
