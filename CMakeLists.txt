@@ -204,7 +204,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(WB_CXXFLAGS -Wall -Wextra -Wno-unused-parameter -Wno-deprecated -Wno-deprecated-copy -Wno-deprecated-declarations -Wno-overloaded-virtual)
-set(WB_CFLAGS -Wall -Wextra -Wno-unused-parameter -Wno-deprecated -Wno-deprecated-copy -Wno-deprecated-declarations -Wno-overloaded-virtual)
+set(WB_CFLAGS   -Wall -Wextra -Wno-unused-parameter -Wno-deprecated -Wno-deprecated-copy -Wno-deprecated-declarations -Wno-overloaded-virtual)
+
+include(CheckCXXCompilerFlag)
+check_cxx_compiler_flag(-Wtemplate-id-cdtor COMPILER_SUPPORTS_TEMPLATE_ID_CDTOR)
+if(COMPILER_SUPPORTS_TEMPLATE_ID_CDTOR)
+  list(APPEND WB_CXXFLAGS -Wno-error=template-id-cdtor)
+endif()
 
 if(BUILD_FOR_GCOV)
     message ("Enable GCOV due to BUILD_FOR_GCOV")
