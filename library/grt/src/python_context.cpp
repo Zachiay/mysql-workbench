@@ -65,6 +65,13 @@ static std::string flatten_class_name(std::string name) {
 
 //--------------------------------------------------------------------------------------------------
 
+#if PY_VERSION_HEX < 0x030900B1
+static inline PyCodeObject *PyFrame_GetCode(PyFrameObject *frame) {
+  Py_INCREF(frame->f_code);
+  return frame->f_code;
+}
+#endif
+
 PythonContextHelper::PythonContextHelper(const std::string &module_path) {
   std::string wb_pythonpath;
 
@@ -1739,32 +1746,26 @@ void PythonContext::log_python_error(const char *message) {
   }
 
   if (tb) {
-    /*PyTracebackObject *trace = (PyTracebackObject *)tb;
-
-    stack = "Traceback:\n";
-    while (trace && trace->tb_frame) {
-      PyFrameObject *frame = (PyFrameObject *)trace->tb_frame;
-      if (frame) {
-#if defined(__APPLE__) || defined(_MSC_VER)
-        auto *codeObject = frame->f_code;
-#else
-        PyCodeObject *codeObject = PyFrame_GetCode(frame);
-#endif
-        if (codeObject) {
-          stack += base::strfmt("  File \"%s\", line %i, in %s\n", PyUnicode_AsUTF8(codeObject->co_filename),
-                                trace->tb_lineno, PyUnicode_AsUTF8(codeObject->co_name));
-          PyObject *code = PyErr_ProgramText(PyUnicode_AsUTF8(codeObject->co_filename), trace->tb_lineno);
-          if (code) {
-            stack += base::strfmt("    %s", PyUnicode_AsUTF8(code));
-            Py_DECREF(code);
+    PyTracebackObject *trace = (PyTracebackObject *)tb;
+    if (PyTraceBack_Check(trace)) {
+      stack = "Traceback:\n";
+      while (trace && trace->tb_frame) {
+        PyFrameObject *frame = (PyFrameObject *)trace->tb_frame;
+        if (frame) {
+          PyCodeObject *codeObject = PyFrame_GetCode(frame);
+          if (codeObject) {
+            stack += base::strfmt("  File \"%s\", line %i, in %s\n", PyUnicode_AsUTF8(codeObject->co_filename),
+                                  trace->tb_lineno, PyUnicode_AsUTF8(codeObject->co_name));
+            PyObject *code = PyErr_ProgramText(PyUnicode_AsUTF8(codeObject->co_filename), trace->tb_lineno);
+            if (code) {
+              stack += base::strfmt("    %s", PyUnicode_AsUTF8(code));
+              Py_DECREF(code);
+            }
           }
-#ifndef _MSC_VER
-          Py_DECREF(codeObject);
-#endif
         }
+        trace = trace->tb_next;
       }
-      trace = trace->tb_next;
-    }*/
+    }
   }
 
   base::Logger::log(base::Logger::LogLevel::Error, "python", "%s\n%sNameError: %s\n", message, stack.c_str(), reason.c_str());
