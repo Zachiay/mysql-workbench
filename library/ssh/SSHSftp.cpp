@@ -30,6 +30,7 @@
 #include <unistd.h>
 #endif
 #include <vector>
+#include <algorithm>
 #include "SSHSftp.h"
 
 DEFAULT_LOG_DOMAIN("SSHSftp")
