@@ -42,7 +42,7 @@ ifndef BUNDLES_PATH
 endif
 
 ifndef ANTLR_JAR_PATH
-ANTLR_JAR_PATH=$(BUNDLES_PATH)/bin/antlr-4.11.1-complete.jar
+ANTLR_JAR_PATH=$(BUNDLES_PATH)/bin/antlr-4.13.2-complete.jar
 endif
 
 ifndef BOOST_ROOT
