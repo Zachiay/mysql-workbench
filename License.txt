@@ -10,7 +10,7 @@ Introduction
    third-party software which may be included in this distribution of
    MySQL Workbench 8.0.40 Community.
 
-   Last updated: June 2024
+   Last updated: September 2024
 
 Licensing Information
 
