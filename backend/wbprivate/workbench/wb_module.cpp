@@ -213,12 +213,19 @@ int WorkbenchImpl::isOsSupported(const std::string &os) {
     return true;
   }
 
-  static std::vector<std::string> supportedOsList {
-    "Ubuntu 23.04", "Ubuntu 23.10", "Ubuntu 24.04", "Debian 10",
-    "Red Hat Enterprise Linux release 9",        // Oracle 9.0: Red Hat Enterprise Linux release 9.0 (Plow)
-    "Fedora release 39", "Fedora release 40", "CentOS release 7",
-    "Windows 10", "Windows Server 2016", "Windows Server 2019", 
-    "Windows 11", "Windows Server 2022",
+  static std::vector<std::string> supportedOsList{
+    "Ubuntu 24.04",
+    "Ubuntu 24.10",
+    "Debian 10",
+    "Red Hat Enterprise Linux release 9", // Oracle 9.0: Red Hat Enterprise Linux release 9.0 (Plow)
+    "Fedora release 39",
+    "Fedora release 40",
+    "CentOS release 7",
+    "Windows 10",
+    "Windows Server 2016",
+    "Windows Server 2019",
+    "Windows 11",
+    "Windows Server 2022",
     "macOS 14"
   };
 
