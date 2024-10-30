@@ -255,6 +255,7 @@ echo * auth plugins ...
 set AUTH_LIB_DIR=%WB_3DPARTY_PATH%\Lib
 xcopy /i /s /y /d %AUTH_LIB_DIR%\authentication_ldap_sasl_client.dll %TARGET_DIR%\.
 xcopy /i /s /y /d %AUTH_LIB_DIR%\authentication_kerberos_client.dll %TARGET_DIR%\.
+xcopy /i /s /y /d %AUTH_LIB_DIR%\mysql_native_password.dll %TARGET_DIR%\.
 xcopy /i /s /y /d %AUTH_LIB_DIR%\comerr64.dll %TARGET_DIR%\.
 xcopy /i /s /y /d %AUTH_LIB_DIR%\fido2.dll %TARGET_DIR%\.
 xcopy /i /s /y /d %AUTH_LIB_DIR%\gssapi64.dll %TARGET_DIR%\.

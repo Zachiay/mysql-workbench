@@ -240,6 +240,7 @@ find %{buildroot}%{_libdir}/mysql-workbench -name \*.la -exec rm {} \; -print
   cp -a %{bundles_path}/lib/mysql/libmysqlclient.so.*   %{buildroot}%{_libdir}/mysql-workbench/
   cp -a %{bundles_path}/lib/mysql/authentication_kerberos_client.so   %{buildroot}%{_libdir}/mysql-workbench/
   cp -a %{bundles_path}/lib/mysql/authentication_ldap_sasl_client.so   %{buildroot}%{_libdir}/mysql-workbench/
+  cp -a %{bundles_path}/lib/mysql/mysql_native_password.so   %{buildroot}%{_libdir}/mysql-workbench/
 %endif
 
 # If python path is specified that means we are using pb2 built

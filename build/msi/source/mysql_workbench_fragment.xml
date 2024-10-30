@@ -87,6 +87,7 @@
                 <File Id="ssh.dll" Name="ssh.dll" />
                 <File Id="libffi.dll" Name="libffi.dll" />
                 <File Id="libssl_3_x64" Name="libssl-3-x64.dll" />
+                <File Id="mysql_native_password" Name="mysql_native_password.dll" />
                 <File Id="authentication_kerberos_client" Name="authentication_kerberos_client.dll" />
                 <File Id="authentication_ldap_sasl_client" Name="authentication_ldap_sasl_client.dll" />
                 <File Id="k5sprt64" Name="k5sprt64.dll" />

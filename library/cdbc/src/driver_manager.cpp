@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2009, 2022, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2009, 2024, Oracle and/or its affiliates. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2.0,
@@ -321,6 +321,11 @@ namespace sql {
         properties["OPT_READ_TIMEOUT"] = read_timeout;
 #ifdef _MSC_VER
       properties["pluginDir"] = base::dirname(mforms::App::get()->get_executable_path("base.dll"));
+#elif defined(__APPLE__)
+      auto nativePasswordDir = base::dirname(mforms::App::get()->get_executable_path("mysql_native_password.so"));
+      properties["pluginDir"] = nativePasswordDir + "/../Frameworks";
+#else
+      properties["pluginDir"] = base::dirname(mforms::App::get()->get_executable_path("mysql_native_password.so"));
 #endif
       properties["OPT_AUTHENTICATION_KERBEROS_CLIENT_MODE"] = "";
       std::string krb5 = parameter_values.get_string("krb5");
